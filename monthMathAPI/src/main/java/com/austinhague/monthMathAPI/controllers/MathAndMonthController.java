@@ -22,6 +22,7 @@ public class MathAndMonthController {
     }
 
     @RequestMapping(value = "/randomMonth", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
     public Month randomMonthGetter() {
         int randomNum = new Random().nextInt(12) + 1;
         return monthSwitch(randomNum);
